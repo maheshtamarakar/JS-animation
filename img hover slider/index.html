@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img Effect</title>
+    <style>
+    .box{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        
+    }
+    .box img{
+        width: 200px;
+        height: 200px;
+    }
+    .overlay{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        opacity: 0;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        width: 100%;
+        transition: all 0.5s ease;
+        background-color: gray;
+    }
+    .box:hover .overlay{
+        opacity: 1;
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img/property-1.jpg" alt="">
+        <div class="overlay">
+            <h1 >text</h1>
+        </div>
+
+    </div>
+</body>
+</html>

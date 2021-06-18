@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Dropdown menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: poppins;
+            box-sizing: border-box;
+
+        }
+       
+
+        li {
+            list-style: none;
+        }
+
+        .navbar {
+            position: sticky;
+            width: 100%;
+        }
+
+        ul.child {
+            display: none;
+            position: absolute;
+            background-color: red;
+            width: 100% !important;
+            left: 0;
+            top: 53px;
+
+        }
+
+        .parent {
+            display: flex;
+            justify-content: space-around;
+            background-color: gray;
+
+        }
+
+        .parent>li {
+            padding: 1.1rem;
+            cursor: pointer;
+            position: relative;
+
+        }
+
+        .parent>li:hover {
+            color: white;
+            background-color: black;
+        }
+        .container{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="parent">
+            <li>item1
+                <ul class="child">
+                    <li>item1.1</li>
+                    <li>item1.2</li>
+                    <li>item1.3</li>
+                </ul>
+            </li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4
+                <ul class="child">
+                    <li>item4.1</li>
+                    <li>item4.2</li>
+                    <li>item4.3</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+  <div class="container">
+      <div class="left">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt similique eligendi animi voluptatum aperiam, at magnam tenetur nostrum autem soluta labore sapiente neque saepe commodi quaerat officia reprehenderit et laborum nobis illo maxime!</p>
+      </div>
+      <div class="right">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt similique eligendi animi voluptatum aperiam, at magnam tenetur nostrum autem soluta labore sapiente neque saepe commodi quaerat officia reprehenderit et laborum nobis illo maxime!</p>
+      </div>
+  </div>
+    <script>
+        $(function () {
+            $('ul.parent > li').click(function () {
+                $(this).find('ul.child').toggle(400);
+            })
+            $(window).scroll(function(){
+                var scroll = $(window).scrollTop();
+                if (scroll >30){
+                    $('.parent').css('background-color','red')
+                }
+                else{
+                    $('.parent').css('background-color','yellow')
+                }
+            })
+        });
+            
+    </script>
+</body>
+
+</html>

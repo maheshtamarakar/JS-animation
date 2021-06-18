@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        div{
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            position: relative;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+   <input type="text" name="" id="name">
+    <span>welcome to my website</span>
+    <input type="button" value="hie">
+    <a href="#">hey there!</a>
+    <a href="#">hey there!</a>
+    <a href="#">hey there!</a>
+    <div class="box">
+
+    </div>
+     -->
+     <button class="test1">set text</button>
+    <button class="test2">set html</button>
+    <button class="test3">set value</button>
+    <p>loren fjfk fhfssajdf fhisn </p>
+    <p>loren fjfk fhfssajdf fhisn </p>
+    <input type="text" value="Rohit">
+    
+    
+   
+
+    <script>
+        $(function(){
+            $('tr:odd').css('background-color', 'red');
+            $('a:first').css('text-decoration', 'none');
+            
+                $('.test1').click(function(){
+                    $('p:first').text('change text');
+                    
+                });
+                $('.test2').click(function(){
+                    $('p:eq(1)').html('change <b>html</b> ');
+                    
+                });
+                $('.test3').click(function(){
+                    $('input:text').val('Mahesh');
+                    
+                });
+                });
+        
+    </script>
+    
+</body>
+</html>

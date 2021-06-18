@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+html{
+    font-size: 62.5%;
+
+}
+.slider{
+    width: 100%;
+    overflow: hidden;
+    /* position: relative; */
+
+}
+.slides{
+    width: 300%;
+    display: flex;
+
+}
+.slides input{
+    display: none;
+
+}
+.slide {
+    width: 33.3333%;
+    height: 64rem;
+    overflow: hidden;
+    transition: all 2s ease;
+    position: relative;
+    left: 0;
+}
+.slide img{
+    width: 100%;
+    filter: brightness(50%);
+    height: 64rem;
+
+
+}
+.manual-nav{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -6.1rem;
+
+
+}
+.manual-btn{
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    border: .3rem solid white;
+
+}
+.manual-btn:hover{
+    background-color: rebeccapurple;
+
+}
+.manual-btn:not(:last-child){
+    margin-right: .5rem;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -33.333%;
+}
+#radio3:checked ~ .first{
+    margin-left: -66.666%;
+}
+.auto-nav{
+    position: absolute;
+    width: 100%;
+    height: 6rem;
+    margin-top: 58rem;
+    display: flex;
+    justify-content: center;
+
+}
+.auto-nav div{
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    border: .3rem solid white;
+
+}
+.auto-nav div:not(:last-child){
+    margin-right: .5rem;
+}
+#radio1:checked ~ .auto-nav .auto-btn1{
+    background-color: rebeccapurple;
+}
+#radio2:checked ~ .auto-nav .auto-btn2{
+    background-color: rebeccapurple;
+}
+#radio3:checked ~ .auto-nav .auto-btn3{
+    
+    background-color: rebeccapurple;
+}
+
+.arrow{
+    position: absolute;
+    font-size: 4.3rem;
+    top: 27rem;
+    z-index: 1;
+    color: white;
+    left: 1%;
+    cursor: pointer;
+    user-select: none;
+}
+.arrow:nth-of-type(2){
+    left: 98%;
+}
